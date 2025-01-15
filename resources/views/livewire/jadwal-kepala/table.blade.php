@@ -1,5 +1,4 @@
 <div>
-    
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50">
@@ -42,8 +41,15 @@
                 <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                     <input type="color" name="" id="" value="{{$event->color}}" disabled>
                 </td>
-                <td class="px-6 py-4 text-right">
-                    <a href="#" class="font-medium text-blue-600  hover:underline">Edit</a>
+                <td class="px-6 py-4 text-center">
+                    <div class="flex justify-between">
+                        <div class="w-1/2">
+                            <livewire:jadwal-kepala.edit-jadwal :event="$event" />
+                        </div>
+                        <div class="w-1/2">
+                            <livewire:jadwal-kepala.delete-jadwal :event="$event" />
+                        </div>
+                    </div>
                 </td>
             </tr>
             @endforeach

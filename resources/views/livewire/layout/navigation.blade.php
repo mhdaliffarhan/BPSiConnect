@@ -83,9 +83,14 @@ new class extends Component
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
+        <div class="pt-2">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2">
+            <x-responsive-nav-link :href="route('jadwal-kepala')" :active="request()->routeIs('jadwal-kepala')" wire:navigate>
+                {{ __('Jadwal Kepala') }}
             </x-responsive-nav-link>
         </div>
 

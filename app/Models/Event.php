@@ -12,7 +12,7 @@ class Event extends Model
         'title',
         'start_date',
         'end_date',
-        'category'
+        'color',
     ];
 
 }
